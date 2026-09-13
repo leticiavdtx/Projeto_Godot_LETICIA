@@ -281,3 +281,8 @@ autoplay = "default"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694712912]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_phu1n")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1820069222]
+limit_left = 0
+limit_top = -300
+limit_bottom = 640

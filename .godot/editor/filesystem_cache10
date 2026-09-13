@@ -1,10 +1,11 @@
 78098b89c88a74ebe8c20117b8754620
-::res://::1789325040
+::res://::1789325206
 icon.svg::CompressedTexture2D::7081393343536532460::1783990136::1789324998::1::::<><><>0<>0<>c01b6b2a83ce2b16dbc2d1c633949e60<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Background/::1789325032
+::res://Background/::1789330061
 1.png::CompressedTexture2D::8836078642866965878::1788909808::1789325028::1::::<><><>0<>0<>7b715b2a82d13d6b72286cf9d88c8fdc<>res://.godot/imported/1.png-07cdc2f5707433b8a0b21cec598027aa.ctex::
 3.png::CompressedTexture2D::2612438847698066961::1788912550::1789325028::1::::<><><>0<>0<>48bd7ac6ca69925c10c5e28432c527b6<>res://.godot/imported/3.png-16d4828dd13dbbd7fbbff1a67fc9f5a6.ctex::
-::res://items/::1789325032
+4.png::CompressedTexture2D::4290304437329402112::1789330061::1789330061::1::::<><><>0<>0<>60e73c2d969ef4eb7f5941768203682f<>res://.godot/imported/4.png-24a0bb76d19a35997f14b09dc0118fde.ctex::
+::res://items/::1789325046
 bandeira.png::CompressedTexture2D::1792793843152226999::1789128998::1789325032::1::::<><><>0<>0<>c271c0c828568c957d4f71035dd4d5c0<>res://.godot/imported/bandeira.png-69807ca6c17bb02a0c5262519a5dc743.ctex::
 ::res://player/::1789325027
 Double_Jump_Dust_5.png::CompressedTexture2D::2571897097745723420::1787345200::1789324999::1::::<><><>0<>0<>1816e82bc1d1ecde97bfc035e123c02b<>res://.godot/imported/Double_Jump_Dust_5.png-a2a5faefc79fc3376989b6e57b36db15.ctex::
@@ -14,14 +15,14 @@ Pink_Monster_Idle_4.png::CompressedTexture2D::7246971578767590856::1787345200::1
 Pink_Monster_Jump_8.png::CompressedTexture2D::7383645921852679526::1787345200::1789324999::1::::<><><>0<>0<>78f6af6b31061fc30336b4dd06ad5619<>res://.godot/imported/Pink_Monster_Jump_8.png-5ee57cc20d3a456d77194c848d0ed1c4.ctex::
 Pink_Monster_Run_6.png::CompressedTexture2D::7491703604538718792::1787346628::1789324999::1::::<><><>0<>0<>dff96a847af99a7ee4b5381cf0d86f7c<>res://.godot/imported/Pink_Monster_Run_6.png-8b321c9017a7f0268e130f130c2609d4.ctex::
 Pink_Monster_Walk_6.png::CompressedTexture2D::2970185118788329966::1787351742::1789324999::1::::<><><>0<>0<>0a32ff7134500aeb89041122e2775e77<>res://.godot/imported/Pink_Monster_Walk_6.png-41e44e20913a546e823ad71df824e21f.ctex::
-::res://scenes/::1789325040
+::res://scenes/::1789329949
 character_body_2d.tscn::PackedScene::5249095330703723411::1789325040::0::1::::<><><>0<>0<><>::uid://dbiqte7lq0vy3::::res://player/Pink_Monster_Idle_4.png<>uid://cds5kxoar2r33::::res://scripts/player.gd<>uid://myhaymq0antr::::res://player/Pink_Monster_Hurt_4.png<>uid://ddgxtmolhmq8u::::res://player/Pink_Monster_Jump_8.png<>uid://de0bi778xsyf5::::res://player/Pink_Monster_Run_6.png<>uid://bik1rrj4se08i::::res://player/Pink_Monster_Walk_6.png
-level1.tscn::PackedScene::6017880675453778438::1789325032::0::1::::<><><>0<>0<><>::uid://bdhqqr8hyckfp::::res://Background/3.png<>uid://c5xr6l6piaaol::::res://Tilemap/Top-Down Crystal Plain_Ground 52.png<>uid://dbaqsb1bhreyh::::res://Tilemap/Top-Down Crystal Plain_Ground 24.png<>uid://bsolplnv3ur1g::::res://Tilemap/Terrain (16x16).png<>uid://cg1x3lf4qxr60::::res://scenes/character_body_2d.tscn<>uid://dx5i6op6w2mha::::res://Background/1.png<>uid://0spb14821576::::res://items/bandeira.png<>uid://c5i4iax377rsr::::res://items/bandeira.gd
+level1.tscn::PackedScene::6017880675453778438::1789329949::0::1::::<><><>0<>0<><>::uid://bdhqqr8hyckfp::::res://Background/3.png<>uid://c5xr6l6piaaol::::res://Tilemap/Top-Down Crystal Plain_Ground 52.png<>uid://dbaqsb1bhreyh::::res://Tilemap/Top-Down Crystal Plain_Ground 24.png<>uid://bsolplnv3ur1g::::res://Tilemap/Terrain (16x16).png<>uid://cg1x3lf4qxr60::::res://scenes/character_body_2d.tscn<>uid://0spb14821576::::res://items/bandeira.png<>uid://c5i4iax377rsr::::res://scripts/bandeira.gd
 main.tscn::PackedScene::7693247530622130242::1788910932::0::1::::<><><>0<>0<><>::uid://cr0du6rwu8bji::::res://scenes/level1.tscn
-::res://scripts/::1789325040
+::res://scripts/::1789325046
+bandeira.gd::GDScript::6896796814547852665::1789134886::0::1::::<>Area2D<><>0<>0<><>::
 new_gd_script.gd::GDScript::6142635576513080497::1787350596::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.gd::GDScript::5022407295283532800::1789134570::0::1::::<>CharacterBody2D<><>0<>0<><>::
-bandeira.gd::GDScript::6896796814547852665::1789134886::0::1::::<>Area2D<><>0<>0<><>::
 ::res://Tilemap/::1789324999
 Terrain (16x16).png::CompressedTexture2D::3679416430395202302::1788903480::1789324999::1::::<><><>0<>0<>70eb78ad12e3ce65d6bbe8d70c021bf4<>res://.godot/imported/Terrain (16x16).png-137e6c6c7e3a8174dd83d9d6aa423dd1.ctex::
 Top-Down Crystal Plain_Ground 03.png::CompressedTexture2D::8650237890154156898::1788901754::1789324999::1::::<><><>0<>0<>e8a5ac2abbb69003ecea04f86a3d4450<>res://.godot/imported/Top-Down Crystal Plain_Ground 03.png-207892eecc58eb32b7488f8162e25ec9.ctex::
