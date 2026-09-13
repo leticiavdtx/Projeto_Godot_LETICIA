@@ -275,7 +275,6 @@ texture_filter = 1
 position = Vector2(0, -2)
 scale = Vector2(0.96875, 1)
 sprite_frames = SubResource("SpriteFrames_kao6y")
-animation = &"idle"
 autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=694712912]

@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dx5i6op6w2mha" path="res://Background/1.png" id="6_6sh32"]
 [ext_resource type="Texture2D" uid="uid://0spb14821576" path="res://items/bandeira.png" id="8_bbk5w"]
 [ext_resource type="Script" uid="uid://c5i4iax377rsr" path="res://scripts/bandeira.gd" id="8_conm7"]
+[ext_resource type="PackedScene" uid="uid://uni4w0dkxx5w" path="res://scenes/fruta.tscn" id="10_d3jkd"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_bbk5w"]
 
@@ -823,8 +824,61 @@ theme_override_constants/margin_bottom = 10
 unique_name_in_owner = true
 custom_minimum_size = Vector2(59, 0)
 layout_mode = 2
-text = "0"
+text = "Pontos: 0"
 label_settings = SubResource("LabelSettings_gsr7l")
 horizontal_alignment = 1
+
+[node name="Coletaveis" type="Node2D" parent="." unique_id=649806623]
+
+[node name="Fruta" parent="Coletaveis" unique_id=1704594298 instance=ExtResource("10_d3jkd")]
+position = Vector2(343, 488)
+
+[node name="Fruta2" parent="Coletaveis" unique_id=1957573394 instance=ExtResource("10_d3jkd")]
+position = Vector2(559, 320)
+
+[node name="Fruta3" parent="Coletaveis" unique_id=2054209422 instance=ExtResource("10_d3jkd")]
+position = Vector2(968, 506)
+
+[node name="Fruta4" parent="Coletaveis" unique_id=699599421 instance=ExtResource("10_d3jkd")]
+position = Vector2(1051, 507)
+
+[node name="Fruta5" parent="Coletaveis" unique_id=2007845584 instance=ExtResource("10_d3jkd")]
+position = Vector2(1134, 506)
+
+[node name="Fruta6" parent="Coletaveis" unique_id=664864966 instance=ExtResource("10_d3jkd")]
+position = Vector2(1153, 73)
+
+[node name="Fruta7" parent="Coletaveis" unique_id=762146120 instance=ExtResource("10_d3jkd")]
+position = Vector2(1276, 76)
+
+[node name="Fruta8" parent="Coletaveis" unique_id=364790668 instance=ExtResource("10_d3jkd")]
+position = Vector2(1390, 80)
+
+[node name="Fruta9" parent="Coletaveis" unique_id=2080546994 instance=ExtResource("10_d3jkd")]
+position = Vector2(2159, 425)
+
+[node name="Fruta10" parent="Coletaveis" unique_id=635598359 instance=ExtResource("10_d3jkd")]
+position = Vector2(2049, 425)
+
+[node name="Fruta11" parent="Coletaveis" unique_id=99555319 instance=ExtResource("10_d3jkd")]
+position = Vector2(1936, 428)
+
+[node name="Fruta12" parent="Coletaveis" unique_id=917091339 instance=ExtResource("10_d3jkd")]
+position = Vector2(1700, 53)
+
+[node name="Fruta13" parent="Coletaveis" unique_id=1644665081 instance=ExtResource("10_d3jkd")]
+position = Vector2(1946, 51)
+
+[node name="Fruta14" parent="Coletaveis" unique_id=866797765 instance=ExtResource("10_d3jkd")]
+position = Vector2(2189, 47)
+
+[node name="Fruta15" parent="Coletaveis" unique_id=175242463 instance=ExtResource("10_d3jkd")]
+position = Vector2(2697, -7)
+
+[node name="Fruta16" parent="Coletaveis" unique_id=1955034371 instance=ExtResource("10_d3jkd")]
+position = Vector2(672, 211)
+
+[node name="Fruta17" parent="Coletaveis" unique_id=399574086 instance=ExtResource("10_d3jkd")]
+position = Vector2(694, 394)
 
 [connection signal="body_entered" from="Bandeira" to="Bandeira" method="_on_body_entered"]

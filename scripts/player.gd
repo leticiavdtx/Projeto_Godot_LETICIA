@@ -39,6 +39,7 @@ func _physics_process(delta: float) -> void:
 		animated_sprite_2d.flip_h = true
 
 
+
 # Forma n.2 de captar inputs: função _input. 
 # Esta função é chamada sempre que um botão é pressionado.
 # Nesse caso, é mais simples que o pulo seja feito aqui.
@@ -47,6 +48,8 @@ func _input(event):
 	if event.is_action_pressed("pular"):
 		if is_on_floor():
 			velocity.y = -PULO
-			pontos = pontos + 1
-			%Pontos.text = str(pontos)
 	
+
+func aumentar_pontos():
+	pontos = pontos + 1
+	%Pontos.text = "Pontos: "+str(pontos)
