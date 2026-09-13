@@ -958,6 +958,9 @@ size = Vector2(6.875, 74)
 font_size = 34
 font_color = Color(1, 0.4392157, 1, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_gsr7l"]
+font_size = 32
+
 [node name="CenaGameplay" type="Node2D" unique_id=1391860158]
 position = Vector2(0, 52)
 
@@ -1046,16 +1049,25 @@ horizontal_alignment = 1
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1044747113]
 
-[node name="Pontos" type="Label" parent="CanvasLayer" unique_id=1009153705]
+[node name="PanelContainer" type="PanelContainer" parent="CanvasLayer" unique_id=1897179858]
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 70.0
+offset_bottom = 110.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PanelContainer" unique_id=426094094]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Pontos" type="Label" parent="CanvasLayer/PanelContainer/MarginContainer" unique_id=1009153705]
 unique_name_in_owner = true
-anchors_preset = -1
-anchor_bottom = 0.016
-offset_left = 43.0
-offset_top = 53.0
-offset_right = 57.333336
-offset_bottom = 131.313
-scale = Vector2(3, 3)
+custom_minimum_size = Vector2(59, 0)
+layout_mode = 2
 text = "0"
-horizontal_alignment = 2
+label_settings = SubResource("LabelSettings_gsr7l")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="Bandeira" to="Bandeira" method="_on_body_entered"]
