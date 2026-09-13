@@ -1,39 +1,42 @@
 extends CharacterBody2D
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -550.0
-var PULO: float = 300
+const VELOCIDADE = 300.0
+const PULO: float = 550.0
 
 var pontos: int = 0
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
+	# Aplicar gravidade caso o jogador não esteja no chão
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-	# Add animation.
+
+	# Forma n.1 de captar inputs: dentro do método process usando a classe  
+	# Input, usamos esse valor aqui mesmo durante o processo de cada tick do 
+	# jogador.
+	
+	# Aqui usamos o método get_axis, pois ele 
+	# condensa os dois botões (esquerda e direita) em um único número, sendo
+	# negativo para esquerda e positivo para a direita. 
+	var direction := Input.get_axis("mover_esquerda", "mover_direita")
+	if direction != 0:
+		velocity.x = direction * VELOCIDADE
+	else:
+		velocity.x = move_toward(velocity.x, 0, VELOCIDADE)
+	move_and_slide()
+	
+	# Ajustar animação
 	if velocity.x >1 or velocity.x <-1:
 		animated_sprite_2d.animation = "running"
 	else:
 		animated_sprite_2d.animation = "idle"
-		
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-	move_and_slide()
 	
+	# Garantir que o sprite esteja orientado corretamente
 	if direction == 1.0:
 		animated_sprite_2d.flip_h = false
 	elif direction == -1.0:
-				animated_sprite_2d.flip_h = true
+		animated_sprite_2d.flip_h = true
 
 
 # Forma n.2 de captar inputs: função _input. 
@@ -41,7 +44,7 @@ func _physics_process(delta: float) -> void:
 # Nesse caso, é mais simples que o pulo seja feito aqui.
 func _input(event):
 	
-	if event.is_action_pressed("ui_up") or event.is_action_pressed("ui_accept"):
+	if event.is_action_pressed("pular"):
 		if is_on_floor():
 			velocity.y = -PULO
 			pontos = pontos + 1
