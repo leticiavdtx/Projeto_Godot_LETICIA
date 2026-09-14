@@ -1,10 +1,13 @@
 extends CharacterBody2D
 
+# Referência ao sprite do jogador, para atualizar a animação
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+# Constantes que alteram a movimentação do jogador (ver código abaixo)
 const VELOCIDADE = 300.0
 const PULO: float = 550.0
 
+# Pontuação que atualiza a cada item coletado (ver script da fruta)
 var pontos: int = 0
 
 func _physics_process(delta: float) -> void:
@@ -50,6 +53,7 @@ func _input(event):
 			velocity.y = -PULO
 	
 
+# É chamado pelas frutas quando elas detectam colisão com o jogador
 func aumentar_pontos():
 	pontos = pontos + 1
 	%Pontos.text = "Pontos: "+str(pontos)
